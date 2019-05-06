@@ -2,9 +2,9 @@ $( document ).ready(function() {
 	$('.slider-wrap').slick({
 		arrows: false,
 		dots: true,
-		dotsClass: 'slider-content__dots'
-		// autoplay: true,
-		// autoplaySpeed: 10000
+		dotsClass: 'slider-content__dots',
+		autoplay: true,
+		autoplaySpeed: 10000
 	});
 	$('.slider-goods-wrap').slick({
 		arrows: true,
