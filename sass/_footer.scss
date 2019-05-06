@@ -1,0 +1,45 @@
+
+.footer-wrap{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 42px 0;
+	text-align: center;
+}
+.footer-col{
+	width: 25%;
+	.footer__title{
+		font-family: "Bebas";
+		font-size: 27px;
+		font-weight: 400;
+		line-height: 25px;
+		margin-bottom: 20px;
+	}
+	.footer__links{
+		li .footer__link{
+			color: #ffffff;
+			font-family: "Open Sans";
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 28px;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.copyright{
+	height: 46px;
+	background-color: #2da89b;
+	.copy{
+		text-align: center;
+		line-height: 46px;
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.footer-col{
+		width: 50%;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+}

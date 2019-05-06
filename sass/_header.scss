@@ -1,0 +1,252 @@
+.header-top{
+	background-color: #fff;
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	&__search{
+		height: 31px;
+		width: 35%;
+	}
+	&__form{
+		position: relative;
+		height: 100%;
+		.search{
+			height: 100%;
+			padding: 0 38px 0 8px;
+			border: 1px solid #e1e1e1;
+			background-color: #ffffff;
+			&:after{
+				display: block;
+				content: '';
+				width: 22px;
+				height: 22px;
+				background-image:url(../img/search.svg);
+				position: absolute;
+				top: 5px;
+				right: 8px;
+				cursor: pointer;
+			}
+			&__input{
+				border:none;
+			outline: none;
+			display: block;
+			height: 100%;
+			width: 100%;
+			}
+		}
+	}
+	&__shop-box{
+		display: flex;
+		align-items: center;
+		.shop-box{
+			width: 41px;
+			height: 37px;
+			margin-right: 17px;
+			background-image:url(../img/shop-basket.svg);
+			background-repeat:no-repeat;
+		}
+		.header__shop-price{
+			color: #a1a1a1;
+			font-size: 33px;
+			font-weight: 400;
+		}
+	}
+}
+.nav{
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
+	background-color: #4ccfc1;
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		li{
+			position: relative;
+			margin-right: 33px;
+			font-size: 21px;
+			font-weight: 400;
+			line-height: 36px;
+			text-transform: uppercase;
+			&:last-child{
+				margin-right: 0;
+			}
+			&:after{
+				display: block;
+				content: '|';
+				position: absolute;
+				top: -2px;
+				left: -15px;
+			}
+			&:first-child:after{
+				display: none;
+			}
+			.nav__link{
+				color: #ffffff;
+				font-family: "Bebas Neue";
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}	
+}
+.slider{
+	overflow-x: hidden;
+	padding: 67px 0 54px;
+	&-item{
+		display: flex !important;
+	}
+	&-img{
+		width: 50%;
+		img{
+			margin: 0 auto;
+		}
+	}
+	&-content{
+		width: 402px;
+		&__title{
+			font-family: "Bebas";
+			font-size: 61px;
+			font-weight: 700;
+			line-height: 54px;
+			text-transform: uppercase;
+		}
+		&__desc{
+			font-family: "Open Sans";
+			font-size: 17px;
+			line-height: 28px;
+			margin: 15px 0 20px;
+		}
+		&__btn{
+			display: inline-block;
+			padding: 10px 25px;
+			border: 3px solid #ffffff;
+			border-radius: 10px;
+			background-color: transparent;
+			color: #ffffff;
+			font-family: "Bebas";
+			font-size: 27px;
+			line-height: 19px;
+			transition: .2s;
+			&:hover{
+				background-color: #fff;
+				color: $main-color;
+			}
+		}
+		&__dots{
+			transform: translateX(50%);
+			li{
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				margin-right: 14px;
+				background-color: #fff;
+				cursor: pointer;
+				&.slick-active{
+					opacity: .5;
+				}
+				button{
+					display: none;
+				}
+			}
+		}
+	}
+}
+.slider-goods-wrap{
+	display: flex;
+}
+.slider-goods{
+	position: relative;
+	background-color: #fff;
+	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.13);
+	&__item{
+	height: 190px;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	box-shadow: -2px 0 5px -5px rgb(0, 0, 0);
+	}
+	&-img{
+		margin-right: 20px;
+		img{
+			margin: 0 auto;
+		}
+	}
+}
+%good-name{
+	color: #afafaf;
+	font-family: "Bebas";
+	font-size: 27px;
+	font-weight: 400;
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+.good-name{
+	@extend %good-name;
+}
+.slider-arrow{
+	width: 100%;
+	position: absolute;
+	top: 30%;
+	left: 0;
+}
+.slick-left, .slick-right{
+		width: 29px;
+		height: 88px;
+		border: none;
+		background-color: transparent;
+		position: absolute;
+	}
+.slick-left{
+		background-image:url(../img/slider-arrow.svg);
+		left: 12%;
+	}
+.slick-right{
+		background-image:url(../img/slider-arrow.svg);
+		transform: rotateY(180deg);
+		right: 12%;
+}
+@media screen and (max-width: 1660px){
+	.slick-left{
+		left: 6%;
+	}
+	.slick-right{
+		right: 6%;
+	}
+}
+@media screen and (max-width: 1380px){
+	.slick-left{
+		left: 0;
+	}
+	.slick-right{
+		right: 0;
+	}
+}
+@media screen and (max-width: 768px){
+	.slider{
+		&-item{
+			flex-direction: column;
+		}
+		&-img{
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		&-content{
+			margin: 0 auto;
+		}
+	}
+}
+@media screen and (max-width: 650px){
+	.header{
+		flex-direction: column;
+		&__logo{
+			margin-bottom: 10px;
+		}
+		&__search{
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+}
